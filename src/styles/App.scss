@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+// @import "./normalize.scss";
+
+.app {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1250px;
+  padding: 0 15px;
+  height: 100%;
+  margin: 0 auto;
+
+  .menu {
+    margin-bottom: 20px;
+
+    &__button {
+      display: inline-block;
+      padding: 15px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: rgba(34, 34, 34, 0.5);
+      }
+    }
+
+    &--selected {
+      background-color: rgba(34, 34, 34, 0.8);
+      color: #fff;
+
+      &:hover {
+        background-color: rgba(34, 34, 34, 0.5);
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+
+    .code {
+      width: 700px;
+      flex-shrink: 0;
+
+      &__panel {
+        min-height: 400px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .ui-and-value {
+      display: flex;
+      justify-content: space-between;
+
+      & > * {
+        width: 46%;
+      }
+    }
+
+    .form {
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+  }
+}
+
+.monaco {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    min-height: 300px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    padding: 10px 0 10px 20px;
+    background-color: #eee;
+  }
+
+  &__code {
+    flex-grow: 1;
+  }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  border: 1px solid rgba(34, 34, 34, 1);
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+.array {
+  &__wrapper {
+    margin: 10px;
+    background-color: rgba(34, 34, 34, 0.5);
+  }
+
+  &__actions {
+    button {
+      margin-bottom: 10px;
+      & + & {
+        margin-right: 10px;
+      }
+    }
+  }
+}
